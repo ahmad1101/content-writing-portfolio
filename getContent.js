@@ -5,7 +5,8 @@ const repoName = 'content-writing-portfolio';
 
 exports.handler = async function (event, context) {
     try {
-        const response = await fetch(`https://github.com/${githubUsername}/${repoName}/blob/main/content-files/${event.queryStringParameters.file}`);
+        const response = await fetch(`https://raw.githubusercontent.com/${githubUsername}/${repoName}/main/content-files/${event.queryStringParameters.file}
+`);
         const content = await response.text();
 
         return {

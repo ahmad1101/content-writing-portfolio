@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Styling of navbar */
+.navbar{
+    padding: 10px 5px;
+    background-color: red;
+}
+
+/* Styling of header first-section */
+.first-section{
+    width: 100%;
+    height: 100vh;
+    background-color: #fffafa;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-section h1{
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive, 'Time New Roman', Times, serif;
+}
+
+.first-section h3{
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.first-section p{
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+}
+
+.first-section button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: dodgerblue;
+    color: #fffafa;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Setting a side margin to all components of first-section */
+.first-section h1,
+.first-section h3,
+.first-section p,
+.first-section button{
+    margin-left: 20px;
+}
+
+/* Styling of div quote */
+.quote{
+    background-color: #f5f5f5;
+    position: relative;
+    padding: 20px 0;
+}
+
+.quote span{
+    font-size: 50px;
+    color: gray;
+    position: relative;
+    margin-left: 20px;
+}
+
+.quote .open{
+    transform: rotateY(180deg);
+}
+
+.quote .quotation,
+.quote .author{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 75%;
+    color: black;
+    margin: 5px 0 5px 40px;
+}
+
+.quote .author{
+    font-weight: bold;
+    width: 50%;
+    display: block;
+    text-align: left;
+}
+
+/* Styling for div partnerships */
+.partnerships{
+    /* background-color: red; */
+    padding: 50px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.partnerships:hover .scroll-div{
+    animation-play-state: paused;
+}
+
+.partnerships .scroll-div{
+    display: inline-block;
+    width: auto;
+    /* background-color: blue; */
+    padding: 0 20px;
+    animation: movingImages 10s infinite linear;
+}
+
+.partnerships::before,
+.partnerships::after{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    content: "";
+    z-index: 2;
+}
+
+/* fading boxes on left and right side */
+.partnerships::before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+}
+
+.partnerships::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+
+/* scroll animation for collaboration logos */
+@keyframes movingImages{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.partnerships .scroll-div img{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    margin: 0 30px;
+}
+
+/* styling of section blog-section */
+.blog-section{
+    width: auto;
+    height: auto;
+    padding: 40px 20px;
+    /* background-color: red; */
+}
+
+.blog-section h2{
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-section .blog-scroll{
+    width: auto;
+    min-width: 100%;
+    overflow-x: auto;
+    height: auto;
+    margin-top: 20px;
+    /* background-color: blue; */
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog-section .blog-scroll .blog-tile{
+    height: 250px;
+    width: 200px;
+    background-color:#F0F0F0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px 15px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px gray;
+}
+
+.blog-section .blog-scroll .blog-tile h3{
+    font-size: 20px;
+    width: 90%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-section .blog-scroll .blog-tile .title-div{
+    width: 100%;
+    height: 80%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+}
+
+.blog-section .blog-scroll .blog-tile .button-div{
+    width: 100%;
+    padding: 5px 0;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+}
+
+.blog-section .blog-scroll .blog-tile .button-div button{
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Styling of contact section */
+.contact-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.contact-form .contact{
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    padding: 20px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.contact-form .contact .name,
+.contact-form .contact .email,
+.contact-form .contact .message,
+.contact-form .contact .send-button{
+    margin-top: 20px;
+}
+
+.contact-form .contact .name p,
+.contact-form .contact .name input,
+.contact-form .contact .email p,
+.contact-form .contact .email input,
+.contact-form .contact .message p,
+.contact-form .contact .message textarea{
+    margin-top: 10px;
+}
+
+.contact-form .contact .name input,
+.contact-form .contact .email input,
+.contact-form .contact .message textarea{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.contact-form .contact .message textarea{
+    height: 80px;
+}
+
+.contact-form .contact .send-button{
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Styling of footer */
+.last{
+    background-color: #1F1B24;
+    padding: 20px 10px;
+}

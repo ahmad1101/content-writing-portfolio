@@ -40,9 +40,16 @@ let tileCreator = (title, keyword) => {
             // Handle the response
             const content = await response.text();
             console.log('Content from Netlify function:', content);
+console.log('GitHub Raw URL:', `https://raw.githubusercontent.com/${githubUsername}/${repoName}/main/content-files/${event.queryStringParameters.file}`);
+
         } 
         catch (error) {
             console.error('Fetch error:', error);
+
+return {
+            statusCode: 404, // or any appropriate status code
+            body: JSON.stringify({ error: 'File not found', details: error.message }),
+        };
         }
     });
 

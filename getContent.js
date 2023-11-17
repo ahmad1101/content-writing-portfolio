@@ -1,5 +1,8 @@
 // getContent.js
 
+const githubUsername = 'ahmad1101';
+const repoName = 'content-writing-portfolio';
+
 exports.handler = async function (event, context) {
     try {
         const response = await fetch(`https://raw.githubusercontent.com/${githubUsername}/${repoName}/main/${event.queryStringParameters.file}`);

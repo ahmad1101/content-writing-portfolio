@@ -40,7 +40,7 @@ let tileCreator = (title, keyword) => {
             // Handle the response
             const content = await response.text();
             console.log('Content from Netlify function:', content);
-console.log('GitHub Raw URL:', `https://raw.githubusercontent.com/${githubUsername}/${repoName}/main/content-files/${event.queryStringParameters.file}`);
+console.log('GitHub Raw URL:', `https://raw.githubusercontent.com/ahmad1101/content-writing-portfolio/main/content-files/${event.queryStringParameters.file}`);
 
         } 
         catch (error) {

@@ -36,7 +36,7 @@ let tileCreator = (title, keyword) => {
 
     readButton.addEventListener('click', async () => {
         try {
-            const response = await fetch(`/.netlify/functions/getContent?file=${keyword}.doc`);
+            const response = await fetch(`/.netlify/functions/getContent?file=${keyword}.docx`);
             // Handle the response
             const content = await response.text();
             console.log('Content from Netlify function:', content);
